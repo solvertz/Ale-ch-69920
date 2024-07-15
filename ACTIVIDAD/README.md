@@ -8,6 +8,12 @@
 **expires: new Date(Date.now() + 600000)**  expires en milisegundos. 
 **httpOnly: true**    Evita que se acceda a las cookies desde JavaScript.   
 **SameSite: "none"**   Asegura que las cookies sean solamente enviadas con el método HTTP (GET, POST, PUT, DELETE).   **SameSite: "lax"**    Asegura que las cookies sean solamente
+'''app.use(session({
+    secret: "secretKey",
+    resave: false,  
+    saveUninitialized: true,
+    //cookie: { secure: false }  
+    }));'''
 
  
 
